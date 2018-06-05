@@ -1,10 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const CardSection = props => (
-  <View style={styles.containerStyle}>{props.children}</View>
-);
-
 const styles = {
   containerStyle: {
     borderBottomWidth: 1,
@@ -16,5 +12,12 @@ const styles = {
     position: 'relative',
   },
 };
+//  [styles.containerStyle, props.style]
+const CardSection = props => (
+  <View style={styles.containerStyle}>
+    {props.children}
+  </View>
+);
+
 
 export default CardSection;

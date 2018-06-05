@@ -13,7 +13,8 @@ class LoginForm extends Component {
   };
   onButtonPress = () => {
     const { email, password } = this.props;
-    this.props.loginUser({ email, password });
+    // this.props.loginUser({ email, password });
+    this.props.loginUser({ email: 'a@mail.ru', password: 'aaaaaa' });
   };
 
   renderError() {
@@ -29,7 +30,7 @@ class LoginForm extends Component {
   }
 
   renderButton() {
-    console.log(`loading ${this.props.loading}`);
+    //  console.log(`loading ${this.props.loading}`);
     if (this.props.loading) {
       return (
         <Spinner size="large" />
